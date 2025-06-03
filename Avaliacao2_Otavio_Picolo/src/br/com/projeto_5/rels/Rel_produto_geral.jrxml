@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9ce82c20-3b15-4d8f-8c23-454854e70e81">
+	<queryString language="SQL">
+		<![CDATA[select p.*, f.nome_for
+from produto p, fornecedor f
+where p.id_for = f.id_for]]>
+	</queryString>
+	<field name="id_prod" class="java.lang.Integer"/>
+	<field name="nome_prod" class="java.lang.String"/>
+	<field name="desc_prod" class="java.lang.String"/>
+	<field name="cod_bar_prod" class="java.lang.String"/>
+	<field name="p_custo_prod" class="java.lang.Double"/>
+	<field name="p_venda_prod" class="java.lang.Double"/>
+	<field name="data_cad_prod" class="java.sql.Date"/>
+	<field name="categoria_prod" class="java.lang.String"/>
+	<field name="marca_prod" class="java.lang.String"/>
+	<field name="quantidade_prod" class="java.lang.String"/>
+	<field name="id_for" class="java.lang.Integer"/>
+	<field name="nome_for" class="java.lang.String"/>
+	<group name="nome_prod">
+		<groupExpression><![CDATA[$F{nome_prod}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
