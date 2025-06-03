@@ -1,0 +1,19 @@
+# Ignorar arquivos compilados
+*.class
+*.jar
+
+# Ignorar pastas geradas automaticamente
+build/
+dist/
+out/
+
+# Ignorar logs e arquivos temporários
+*.log
+*.tmp
+
+# Ignorar configurações locais do NetBeans
+nbproject/private/
+
+# Ignorar configurações de outras IDEs
+.idea/
+*.iml
